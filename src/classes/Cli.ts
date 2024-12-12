@@ -11,12 +11,16 @@ class Cli {
   // TODO: You will need to use the Union operator to define additional types for the array
   // TODO: See the AbleToTow interface for an example of how to use the Union operator
   vehicles: (Car)[];
+  trucks: (Truck)[];
+  motorbikes: (Motorbike)[];
   selectedVehicleVin: string | undefined;
   exit: boolean = false;
 
   // TODO: Update the constructor to accept Truck and Motorbike objects as well
-  constructor(vehicles: (Car)[]) {
+  constructor(vehicles: (Car)[], trucks: (Truck)[], motorbikes: (Motorbike)[]) {
     this.vehicles = vehicles;
+    this.trucks = trucks;
+    this.motorbikes = motorbikes;
   }
 
   // static method to generate a vin
